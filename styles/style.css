@@ -1,0 +1,11 @@
+* {}
+html {}
+body {
+  text-align: center;
+}
+main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
