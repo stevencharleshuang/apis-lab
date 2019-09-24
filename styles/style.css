@@ -16,8 +16,7 @@ main {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  text-align: center;
-  /* align-items: flex-start; */
+  align-items: center;
 }
 
 #search-input {
@@ -25,6 +24,7 @@ main {
 }
 
 .btn {
+  /* align-items: center; */
   font-size: 1.6rem;
   background: white;
   border-radius: 0px;
@@ -43,6 +43,5 @@ header h1 {
 }
 
 .gallery {
-  /* display: flex;
-  flex-flow: row wrap; */
+  margin: 30px auto;
 }

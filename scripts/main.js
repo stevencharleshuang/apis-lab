@@ -49,7 +49,7 @@ const populateGallery = (results) => {
 
   if (pagination.total_count > 25) {
     const loadMoreBtn = document.createElement('button');
-    loadMoreBtn.innerText = 'Load More...';
+    loadMoreBtn.innerText = 'Moar!';
     loadMoreBtn.setAttribute('class', 'load-more-btn btn');
     main.append(loadMoreBtn);
     
