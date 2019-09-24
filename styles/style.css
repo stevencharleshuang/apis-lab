@@ -15,10 +15,11 @@ html {
 
 body {
   text-align: center;
+  margin: 0;
 }
 
 main {
-  margin: 10px auto;
+  margin: 30px auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
