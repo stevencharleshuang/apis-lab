@@ -17,10 +17,11 @@ const handleSubmit = (e) => {
   fetch(`http://api.giphy.com/v1/gifs/search?q=${query}&api_key=RRdCt59QG1Ut01EyxPVOO4Rgp1WiGJhR`)
     .then(response => response.json())
     .then(response => {
-      console.log(response)
+      console.log(response);
       resultsArr = response.data;
       pagination = response.pagination;
-      populateGallery(response.data);
+
+      !!response.pagination.total_count < 1 ? noResults() : populateGallery(response.data);
     })
     .catch(err => console.log(err));
 }
@@ -58,6 +59,15 @@ const populateGallery = (results) => {
     
     loadMoreBtn.addEventListener('click', handleLoadMore);
   }
+}
+
+const noResults = () => {
+  console.log('no results');
+  gallery.innerHTML = '';
+
+  let tryAgain = document.createElement('h2');
+  tryAgain.innerText = 'No gifs here; try again...';
+  gallery.append(tryAgain);
 }
 
 const addMoreToGallery = (results) => {
