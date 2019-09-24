@@ -41,7 +41,7 @@ const populateGallery = (results) => {
   gallery.innerHTML = '';
   results.forEach(img => {
     let gif = document.createElement('img');
-    gif.setAttribute('src', `https://media.giphy.com/media/${img.id}/giphy.gif`);
+    gif.setAttribute('src', img.images.original.url);
     gallery.append(gif);
   });
 
@@ -60,7 +60,7 @@ const populateGallery = (results) => {
 const addMoreToGallery = (results) => {
   results.forEach(img => {
     let gif = document.createElement('img');
-    gif.setAttribute('src', `https://media.giphy.com/media/${img.id}/giphy.gif`);
+    gif.setAttribute('src', img.images.original.url);
     gallery.append(gif);
   })
 }
