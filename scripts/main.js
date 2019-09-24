@@ -2,6 +2,7 @@ const searchBtn   = document.querySelector('.search-btn');
 const searchInput = document.querySelector('#search-input');
 const gallery     = document.querySelector('.gallery');
 const main        = document.querySelector('main');
+const footer      = document.querySelector('footer');
 
 let resultsArr = [];
 let pagination = [];
@@ -48,10 +49,12 @@ const populateGallery = (results) => {
   console.log(pagination);
 
   if (pagination.total_count > 25) {
+    if (footer.hasChildNodes()) footer.innerHTML = '';
+
     const loadMoreBtn = document.createElement('button');
     loadMoreBtn.innerText = 'Moar!';
     loadMoreBtn.setAttribute('class', 'load-more-btn btn');
-    main.append(loadMoreBtn);
+    footer.append(loadMoreBtn);
     
     loadMoreBtn.addEventListener('click', handleLoadMore);
   }
